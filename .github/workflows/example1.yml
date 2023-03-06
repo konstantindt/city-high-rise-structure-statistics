@@ -1,0 +1,13 @@
+name: Example 1
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  container-test-job:
+    runs-on: macos-latest
+    container: ubuntu:latest
+
+    steps:
+        - run: cat /etc/os-release
